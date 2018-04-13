@@ -46,16 +46,6 @@ public class Solution {
         }
     }
 
-    public static MyList<Device> getDeviceByPower(MyList<Device> list, int lowerBound, int upperBound) {
-        MyList<Device> result = new MyList<>();
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getPower() >= lowerBound && list.get(i).getPower() <= upperBound) {
-                result.add(list.get(i));
-            }
-        }
-        return result;
-    }
-
     public static MyList<Device> getDeviceByState(MyList<Device> list, boolean state) {
         MyList<Device> result = new MyList<>();
         int countOn = 0;
@@ -78,6 +68,16 @@ public class Solution {
                 if (brend[i] == list.get(j).getBrandDevice()) {
                     result.add(list.get(j));
                 }
+            }
+        }
+        return result;
+    }
+    
+    public static MyList<Device> getDeviceByPower(MyList<Device> list, int lowerBound, int upperBound) {
+        MyList<Device> result = new MyList<>();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getPower() >= lowerBound && list.get(i).getPower() <= upperBound) {
+                result.add(list.get(i));
             }
         }
         return result;
