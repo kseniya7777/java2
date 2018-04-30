@@ -1,4 +1,4 @@
-package com.epam.kseniya_samokhina.java.lesson2.task2.Device;
+package com.epam.kseniya_samokhina.java.lesson2.task1.Device;
 
 public enum TypeOfDevice {
     FRIDGE,

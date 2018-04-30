@@ -1,4 +1,4 @@
-package com.epam.kseniya_samokhina.java.lesson2.task2.Utils;
+package com.epam.kseniya_samokhina.java.lesson2.task1.Utils;
 
 public class MyList<Device> {
     private final int INIT_SIZE = 16;

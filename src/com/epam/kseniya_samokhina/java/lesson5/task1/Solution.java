@@ -1,9 +1,9 @@
-package com.epam.kseniya_samokhina.java.lesson2.task2;
+package com.epam.kseniya_samokhina.java.lesson5.task1;
 
-import com.epam.kseniya_samokhina.java.lesson2.task2.Device.Device;
-import com.epam.kseniya_samokhina.java.lesson2.task2.Device.TypeOfDevice;
-import com.epam.kseniya_samokhina.java.lesson2.task2.Utils.MyList;
+import com.epam.kseniya_samokhina.java.lesson5.task1.Device.Device;
+import com.epam.kseniya_samokhina.java.lesson5.task1.Device.TypeOfDevice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Solution {
@@ -14,7 +14,7 @@ public class Solution {
         Device computer = createDevice("ASUS", "Korean", TypeOfDevice.COMPUTER, 500, "Black/Silver", "Bed room", false);
         Device cooker = createDevice("Gefest", "Germany", TypeOfDevice.COOKER, 1500, "White", "Kitchen", true);
 
-        MyList<Device> myList = new MyList<>();
+        ArrayList<Device> myList = new ArrayList<>();
         myList.add(fridge);
         myList.add(tv);
         myList.add(printer);
@@ -26,7 +26,7 @@ public class Solution {
         }
 
         System.out.println("\nSorting devices by name that are plugged into the outlet:");
-        MyList<Device> sortDeviceByState = getDeviceByState(myList, true);
+        ArrayList<Device> sortDeviceByState = getDeviceByState(myList, true);
         for (int i = 0; i < sortDeviceByState.size(); i++) {
             System.out.println(sortDeviceByState.get(i));
         }
@@ -40,14 +40,14 @@ public class Solution {
         System.out.println(sumPower);
 
         System.out.println("\nDevice, whose power is in the range of 1000 to 2000:");
-        MyList<Device> sortByPower = getDeviceByPower(myList, 1000, 2000);
+        ArrayList<Device> sortByPower = getDeviceByPower(myList, 1000, 2000);
         for (int i = 0; i < sortByPower.size(); i++) {
             System.out.println(sortByPower.get(i));
         }
     }
 
-    public static MyList<Device> getDeviceByState(MyList<Device> list, boolean state) {
-        MyList<Device> result = new MyList<>();
+    public static ArrayList<Device> getDeviceByState(ArrayList<Device> list, boolean state) {
+        ArrayList<Device> result = new ArrayList<>();
         int countOn = 0;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).isStateOfDevice() == state) {
@@ -72,9 +72,9 @@ public class Solution {
         }
         return result;
     }
-    
-    public static MyList<Device> getDeviceByPower(MyList<Device> list, int lowerBound, int upperBound) {
-        MyList<Device> result = new MyList<>();
+
+    public static ArrayList<Device> getDeviceByPower(ArrayList<Device> list, int lowerBound, int upperBound) {
+        ArrayList<Device> result = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getPower() >= lowerBound && list.get(i).getPower() <= upperBound) {
                 result.add(list.get(i));
