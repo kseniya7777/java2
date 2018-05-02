@@ -88,7 +88,7 @@ public class Solution {
     public static Device createDevice(String brand, String origin, TypeOfDevice type, int power, String color, String location, boolean isOn) {
         try {
             if (power < 0) throw new ExceptionNegative(power);
-            if(!origin.matches("^\\D*$")) throw new ExceptionOfOrigin(origin);
+            if (!origin.matches("^\\D*$")) throw new ExceptionOfOrigin(origin);
             return new Device(brand, origin, type, power, color, location, isOn);
         } catch (ExceptionNegative e) {
             System.out.println(e.getMessage());

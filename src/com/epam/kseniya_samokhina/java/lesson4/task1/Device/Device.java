@@ -1,6 +1,6 @@
 package com.epam.kseniya_samokhina.java.lesson4.task1.Device;
 
-public class Device implements InterfaceDevice, Cloneable{
+public class Device implements InterfaceDevice, Cloneable {
     private String brandDevice;
     private String originDevice;
     private TypeOfDevice typeOfDevice;
@@ -28,6 +28,7 @@ public class Device implements InterfaceDevice, Cloneable{
     public String getOriginDevice() {
         return originDevice;
     }
+
     @Override
     public boolean isStateOfDevice() {
         return stateOfDevice;
