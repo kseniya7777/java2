@@ -56,14 +56,14 @@ public class Report {
             if (passedDays > daysOfCourse || (passedDays == daysOfCourse && Integer.parseInt(String.valueOf(currentHour)) >= hoursOfCourse + 10)) {
                 int laterDays = passedDays - daysOfCourse;
                 int laterHours = Math.min(18, passedHours) - (hoursOfCourse + 10);
-                System.out.print(" После окончания прошло " + laterDays + " д " + laterHours + " ч" + "\n");
+                System.out.print("После окончания прошло " + laterDays + " д " + laterHours + " ч" + "\n");
             } else {
                 int leftDays = daysOfCourse - passedDays;
                 if (passedHours >= 18) {
                     leftDays--;
                 }
                 int leftHours = (hoursOfCourse + 10) - Math.min(10, Math.max(10, passedHours));
-                System.out.print(" До окончания осталось " + leftDays + " д " + leftHours + " ч" + "\n");
+                System.out.print("До окончания осталось " + leftDays + " д " + leftHours + " ч" + "\n");
             }
         }
     }
