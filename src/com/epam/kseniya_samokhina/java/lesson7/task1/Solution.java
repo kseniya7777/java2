@@ -27,7 +27,6 @@ public class Solution {
                 for (int j = 0; j < 10; j++) {
                     String queryInsert = "insert into students(`firstname`, `secondname`, `group`) " +
                             "values ('" + firstNames.get(i) + "','" + secondNames.get(i) + "', " + groups.get(i) + ");";
-
                     statement.executeUpdate(queryInsert);
                 }
             }
