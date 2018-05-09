@@ -119,7 +119,6 @@ public class Device implements Serializable, InterfaceDevice, Cloneable {
     }
 
     @XmlElement
-
     public void setDeviceLocation(String location) {
         this.deviceLocation = location;
     }
