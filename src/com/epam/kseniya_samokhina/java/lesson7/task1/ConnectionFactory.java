@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Created by Kseniya on 08.05.2018.
- */
 public class ConnectionFactory {
     public static Connection getConnection() {
         final String url = "jdbc:mysql://localhost:3306/student";
