@@ -22,7 +22,6 @@ public interface InterfaceDevice extends Comparable<InterfaceDevice> {
 
     void setTypeOfDevice(TypeOfDevice typeOfDevice);
 
-
     void setPowerOfDevice(int powerOfDevice);
 
     void setStateOfDevice(boolean stateOfDevice);
